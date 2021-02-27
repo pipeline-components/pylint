@@ -21,7 +21,7 @@ The image is for running pylint, pylint is installed in /app/ in case you need t
 ```yaml
 pylint:
   stage: linting
-  image: pipelinecomponents/pylint:latest
+  image: registry.gitlab.com/pipeline-components/pylint:latest
   script:
     - pylint
 ```
