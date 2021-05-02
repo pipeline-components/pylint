@@ -1,20 +1,31 @@
-FROM python:3.9.4-alpine3.12
+# ==============================================================================
+# Add https://gitlab.com/pipeline-components/org/base-entrypoint
+# ------------------------------------------------------------------------------
+FROM pipelinecomponents/base-entrypoint:0.3.0 as entrypoint
 
+# ==============================================================================
+# Component specific
+# ------------------------------------------------------------------------------
+FROM python:3.9.1-alpine3.12
 WORKDIR /app/
-
-# Generic
 COPY app /app/
-
-# Python
 RUN pip install --no-cache-dir -r requirements.txt
+
+# ==============================================================================
+# Generic for all components
+# ------------------------------------------------------------------------------
+COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+ENV DEFAULTCMD pylint
 
 WORKDIR /code/
 
-# Build arguments
+# ==============================================================================
+# Container meta information
+# ------------------------------------------------------------------------------
 ARG BUILD_DATE
 ARG BUILD_REF
 
-# Labels
 LABEL \
     maintainer="Robbert Müller <dev@pipeline-components.dev>" \
     org.label-schema.description="Pylint in a container for gitlab-ci" \
