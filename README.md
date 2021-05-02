@@ -23,7 +23,7 @@ pylint:
   stage: linting
   image: registry.gitlab.com/pipeline-components/pylint:latest
   script:
-    - pylint
+    - pylint **/*.py
 ```
 
 ## Versioning
