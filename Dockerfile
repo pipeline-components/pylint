@@ -6,7 +6,7 @@ FROM pipelinecomponents/base-entrypoint:0.4.0 as entrypoint
 # ==============================================================================
 # Component specific
 # ------------------------------------------------------------------------------
-FROM python:3.9.4-alpine3.12
+FROM python:3.9.5-alpine3.12
 WORKDIR /app/
 COPY app /app/
 RUN pip install --no-cache-dir -r requirements.txt
