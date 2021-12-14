@@ -9,7 +9,7 @@ FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 FROM python:3.9.5-alpine3.12
 WORKDIR /app/
 COPY app /app/
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
 
 # ==============================================================================
 # Generic for all components
