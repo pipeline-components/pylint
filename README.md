@@ -15,6 +15,7 @@
 ## Usage
 
 The image is for running pylint, pylint is installed in /app/ in case you need to customize the install before usage.
+The plugin [pylint-gitlab] is installed for easy gitlab reporting features
 
 ## Examples
 
@@ -24,6 +25,19 @@ pylint:
   image: registry.gitlab.com/pipeline-components/pylint:latest
   script:
     - pylint **/*.py
+```
+
+Example with pylint-gitlab
+```yaml
+pylint:
+  stage: linting
+  image: registry.gitlab.com/pipeline-components/pylint:latest
+  script:
+    - pylint --exit-zero --load-plugins=pylint_gitlab --output-format=gitlab-codeclimate **/*.py > codeclimate.json
+  artifacts:
+    reports:
+      codequality: codeclimate.json
+    when: always
 ```
 
 ## Versioning
@@ -100,6 +114,6 @@ SOFTWARE.
 [repository]: https://gitlab.com/pipeline-components/pylint
 [semver]: http://semver.org/spec/v2.0.0.html
 [version-shield]: https://images.microbadger.com/badges/version/pipelinecomponents/pylint.svg
-
+[pylint-gitlab]: https://gitlab.com/smueller18/pylint-gitlab
 [frenck]: https://github.com/frenck
 [hassio-addons]: https://github.com/hassio-addons
