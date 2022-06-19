@@ -7,9 +7,13 @@ FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 # Component specific
 # ------------------------------------------------------------------------------
 FROM python:3.10.4-alpine3.14
+ENV PYTHONUSERBASE /app
+ENV PATH "$PATH:/app/bin/"
+
 WORKDIR /app/
 COPY app /app/
-RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
+
+RUN pip3 install --user --no-cache-dir --prefer-binary -r requirements.txt
 
 # ==============================================================================
 # Generic for all components
