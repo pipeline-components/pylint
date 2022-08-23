@@ -6,7 +6,7 @@ FROM pipelinecomponents/base-entrypoint:0.5.0 as entrypoint
 # ==============================================================================
 # Component specific
 # ------------------------------------------------------------------------------
-FROM python:3.10.4-alpine3.14
+FROM python:3.10.6-alpine3.16
 ENV PYTHONUSERBASE /app
 ENV PATH "$PATH:/app/bin/"
 
