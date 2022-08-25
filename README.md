@@ -95,14 +95,14 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[commits]: https://gitlab.com/pipeline-components/pylint/commits/master
-[contributors]: https://gitlab.com/pipeline-components/pylint/graphs/master
+[commits]: https://gitlab.com/pipeline-components/pylint/-/commits/master
+[contributors]: https://gitlab.com/pipeline-components/pylint/-/graphs/master
 [dockerhub]: https://hub.docker.com/r/pipelinecomponents/pylint
 [license-shield]: https://img.shields.io/badge/License-MIT-green.svg
 [mjrider]: https://gitlab.com/mjrider
 [discord]: https://discord.gg/vhxWFfP
 [gitlabci-shield]: https://img.shields.io/gitlab/pipeline/pipeline-components/pylint.svg
-[gitlabci]: https://gitlab.com/pipeline-components/pylint/commits/master
+[gitlabci]: https://gitlab.com/pipeline-components/pylint/-/commits/master
 [issue]: https://gitlab.com/pipeline-components/pylint/issues
 [keepchangelog]: http://keepachangelog.com/en/1.0.0/
 [layers-shield]: https://images.microbadger.com/badges/image/pipelinecomponents/pylint.svg
