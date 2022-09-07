@@ -1,2 +1,2 @@
-pylint==2.15.0
+pylint==2.15.2
 pylint-gitlab==1.1.0
