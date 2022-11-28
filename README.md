@@ -31,7 +31,7 @@ pylint:
   stage: linting
   image: registry.gitlab.com/pipeline-components/pylint:latest
   script:
-    - pylint --exit-zero --load-plugins=pylint_gitlab --output-format=gitlab-codeclimate **/*.py > codeclimate.json
+    - pylint --exit-zero --load-plugins=pylint_gitlab --output-format=gitlab-codeclimate:codeclimate.json **/*.py
   artifacts:
     reports:
       codequality: codeclimate.json
