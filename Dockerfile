@@ -37,7 +37,7 @@ LABEL \
     org.label-schema.name="Pylint" \
     org.label-schema.schema-version="1.0" \
     org.label-schema.url="https://pipeline-components.gitlab.io/" \
-    org.label-schema.usage="https://gitlab.com/pipeline-components/pylint/blob/master/README.md" \
+    org.label-schema.usage="https://gitlab.com/pipeline-components/pylint/blob/main/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-url="https://gitlab.com/pipeline-components/pylint/" \
     org.label-schema.vendor="Pipeline Components"
